@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Retro Pixel Character Maker</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1>Retro Pixel Character Maker</h1>
+
+        <label for="upload">Upload Image</label>
+        <input type="file" id="upload" accept="image/*">
+
+        <div class="controls">
+            <label for="pixel">Pixel Size</label>
+            <input type="range" id="pixel" min="4" max="32" value="16" title="Adjust pixel size">
+
+            <label for="palette">Colours</label>
+            <input type="range" id="palette" min="4" max="32" value="16" title="Adjust number of colours">
+
+            <select id="paletteType" title="Select colour palette type">
+                <option value="default">Default</option>
+                <option value="gameboy">GameBoy</option>
+                <option value="nes">NES</option>
+            </select>
+        </div>
+
+        <button id="generateBtn">Generate</button>
+        <button id="downloadBtn" disabled>Download</button>
+
+
+        <canvas id="canvas"></canvas>
+        <script src="/static/script.js" defer></script>
+    </body>
+</html>
